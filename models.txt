@@ -1,0 +1,112 @@
+User
+id
+name
+last_name
+first_name
+
+
+Order
+id
+name
+product
+date
+
+Product
+id
+name
+category
+dateadded
+
+
+Logistics
+id
+companyname
+address
+location
+
+Client
+id
+name
+phone_no
+branch_address
+governorate
+
+Biil
+id
+contract_id
+amount_loaded
+total_price
+distanc_traveled
+time_taken
+
+Contract
+id
+contract_type
+legal_terms
+date
+duration
+payment_method
+
+Finance
+name:
+phone_no
+calculate_costs
+generate_bill
+validate_payments
+
+Trip Operator
+request_driver()
+provide_trip_information
+track_trip()
+name:
+id:
+phone_no
+email_address
+
+Driver
+id:
+trip_id
+rating
+phone_no
+delivers_products
+update_trip_progress
+cancels_requests
+accepts_requests
+request_trip_details
+
+Trip
+trip_id
+bill_id
+no_of_drop_offs
+no_of_helpers
+date
+trip_type
+pick_up_and_drop_off
+locations()
+
+Customer               Admin             Finance                       Trip-Operator            Driver
+  NY
+  N-C   |
+        |
+    choose contract
+        type
+
+    sign contract
+
+    Request a trip
+                        Process
+                        Request           Check-Contract               Request Assigned           ReceiveTrip
+                                              Type                        Driver                       Data
+                                        Month.    On-Demand                                       Yes      No
+                                           Choose-Contract                                         (Do you want)
+                                               Type                                                (to proceed?)
+                                        Calculate   Calculate                                      Process   Cancel
+                                         Hrs/Trip   $/KM                                            Request
+                                              Generate                            ----------------   Location
+                                                Bill                              |
+                                                                            Cancel
+                                                                                   | Proceed
+                                                                            Add location & Client
+                                                                             Details on GPS
+
+                                                                                Track Trip              Start Trip
